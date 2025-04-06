@@ -1,7 +1,7 @@
 # DHCP Packet Tracer Lab
 
 **Author:** Millioud NetLab  
-**Date:** [06-04-2025] 
+**Date:** 06-04-2025 
 
 ## Objectives
 
@@ -27,3 +27,34 @@ POOL3: 203.0.113.0/30 (reserve .1)
 ## Topology
 
 <img width="591" alt="Captura de Pantalla 2025-04-06 a la(s) 13 16 15" src="https://github.com/user-attachments/assets/3244058d-e763-41a8-949d-7f125bfc96de" />
+
+## Devices Used
+
+
+| Device         | Model        | Quantity |
+|----------------|--------------|----------|
+| Router         | 2911         | 2        |
+| Switch         | 2960         | 2        |
+| PC         | PC-PT         | 2        |
+
+## IP Addressing Table
+
+| Device | Interface | VLAN | IP Address     | Subnet Mask       |
+|--------|-----------|------|----------------|-------------------|
+| PC1    | Fa0/0     | 10   | 192.168.10.2   | 255.255.255.0     |
+| PC2    | Fa0/0     | 20   | 192.168.20.2   | 255.255.255.0     |
+| L3SW   | VLAN 10   | 10   | 192.168.10.1   | 255.255.255.0     |
+| L3SW   | VLAN 20   | 20   | 192.168.20.1   | 255.255.255.0     |
+
+
+
+
+
+
+
+
+
+
+
+
+
