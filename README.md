@@ -65,20 +65,47 @@ R2(dhcp-config)#dns-server 8.8.8.8
 
 R2(dhcp-config)#domain-name jeremysitlab.com
 
-R2(dhcp-config)#default-router 203.0.113.2
+R2(dhcp-config)#default-router 192.168.1.1
 
+R2(config)#ip dhcp excluded-address 192.168.2.1 192.168.2.10
 
+R2(dhcp-config)#ip dhcp pool POOL2
 
+R2(dhcp-config)#network 192.168.2.0 255.255.255.0
 
+R2(dhcp-config)#dns-server 8.8.8.8
 
+R2(dhcp-config)#domain-name jeremysitlab.com
 
+R2(dhcp-config)#default-router 192.168.2.1
 
+R2(config)#ip dhcp excluded-address 203.0.113.1
 
+R2(dhcp-config)#ip dhcp pool POOL3
 
+R2(dhcp-config)#network 203.0.113.0 255.255.255.252
 
+### Router 1 (2.)
 
+R1>enable
 
+R1#conf t
 
+R1(config)#int g0/0
+
+R1(config-if)#ip address dhcp
+
+R1(config-if)#no shut
+
+### Router 1 (3.)
+
+R1(config-if)#int g0/1
+
+R1(config-if)#ip helper-address 192.168.1.1
+
+### PC 1 / PC 2 (4.)
+
+C:\>ipconfig /renew
 
 
 
