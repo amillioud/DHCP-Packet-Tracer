@@ -52,12 +52,19 @@ POOL3: 203.0.113.0/30 (reserve .1)
 ### Router 2 (1.)
 
 R2>enable
+
 R2#show ip dhcp binding
+
 R2(config)#ip dhcp excluded-address 192.168.1.1 192.168.1.10
+
 R2(config)#ip dhcp pool POOL1
+
 R2(dhcp-config)#network 192.168.1.0 255.255.255.0
+
 R2(dhcp-config)#dns-server 8.8.8.8
+
 R2(dhcp-config)#domain-name jeremysitlab.com
+
 R2(dhcp-config)#default-router 203.0.113.2
 
 
